@@ -1,9 +1,9 @@
-with open ("aula.txt", "w") as arq:
+with open ("./arquivos/aula.txt", "w") as arq:
     arq.write("Falei Falei Falei")
     arq.write("\nFalei Falei Falei")
 
 
-with open ("aula.txt", "r") as arq:
+with open ("./arquivos/aula.txt", "r") as arq:
     conteudo = arq.read()
     print(conteudo)
     

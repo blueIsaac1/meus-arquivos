@@ -25,13 +25,13 @@ while True:
             inventario[numero_patrimonial] = [descricao, departamento, data_atual]
             resp = input("Digite <S> para continuar ou qualquer outra tecla para parar: ").upper()
         
-        with open("inventario.json", "w") as arq_json:
+        with open("./arquivos/inventario.json", "w") as arq_json:
             json.dump(inventario, arq_json, indent=4)
         print("JSON Gerado!")
 
     elif opcao == 2:
         try:
-            with open("inventario.json", "r") as arq_json:
+            with open("./arquivos/inventario.json", "r") as arq_json:
                 resultado = json.load(arq_json)
                 for x, y in resultado.items():
                     print("Número Patrimonial: ", x)

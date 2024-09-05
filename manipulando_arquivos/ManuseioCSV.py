@@ -25,13 +25,13 @@ while True:
             resp = input("Digite <S> para continuar ou qualquer outra tecla para parar: ").upper()
 
     elif opcao == 2:
-        with open("inventario.csv", "a") as inv:
+        with open("./arquivos/inventario.csv", "a") as inv:
             for chave, valor in inventario.items():
                 inv.write(f"{chave};{valor[0]};{valor[1]};{valor[2]}\n")
         print("Persistido com sucesso!")
 
     elif opcao == 3:
-        with open("inventario.csv", "r") as inv:
+        with open("./arquivos/inventario.csv", "r") as inv:
             print(inv.read())
 
     else:
